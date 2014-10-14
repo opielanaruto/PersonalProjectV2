@@ -55,7 +55,12 @@
     <Compile Include="Adapters\Data\FinalProV2Adapter.cs" />
     <Compile Include="Adapters\Interfaces\IFinalProV2Adapter.cs" />
     <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Category.cs" />
+    <Compile Include="Content.cs" />
+    <Compile Include="Friends.cs" />
+    <Compile Include="Messages.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

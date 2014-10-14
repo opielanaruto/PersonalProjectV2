@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace FinalProV2.Db.Adapters.Interfaces
 {
-	interface IFinalProV2Adapter
-	{
+	public interface IFinalProV2Adapter
+	{/*CRUD*/
+
+		/*Category*/
+		Category AddCategory(Category category);
+		List<Category> GetAllCategory();
+		Category GetCategory(int id);
+		Category UpdateCategory(Category category);
+		void DeleteCategory(int id);
+		/*Content*/
+		Content AddContent(Content content);
+		List<Content> GetAllContent();
+		Content GetContent(int id);
+		Content UpdateContent(Content content);
+		void DeleteContent(int id);
 	}
 }

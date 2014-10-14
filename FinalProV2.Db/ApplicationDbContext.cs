@@ -11,8 +11,8 @@ namespace FinalProV2.Db
 {
 	public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 	{
-		//public DbSet<Content> Contents { get; set; }
-		//public DbSet<Category> Categorys { get; set; }
+		public DbSet<Content> Contents { get; set; }
+		public DbSet<Category> Categorys { get; set; }
 		public ApplicationDbContext()
 			: base("DefaultConnection", throwIfV1Schema: false)
 		{
