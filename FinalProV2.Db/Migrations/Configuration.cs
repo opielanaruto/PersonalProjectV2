@@ -14,7 +14,7 @@ namespace FinalProV2.Db.Migrations
 
         protected override void Seed(FinalProV2.Db.ApplicationDbContext context)
         {
-			//Seeder.Seed(context);
+			Seeder.Seed(context);
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
