@@ -1,4 +1,5 @@
-﻿using FinalProV2.Db;
+﻿using FinalProV2.DataModels;
+using FinalProV2.Db;
 using FinalProV2.Db.Adapters.Data;
 using FinalProV2.Db.Adapters.Interfaces;
 using System;

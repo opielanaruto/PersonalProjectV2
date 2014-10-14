@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinalProV2.Db
+namespace FinalProV2.DataModels
 {
 	public class User
 	{

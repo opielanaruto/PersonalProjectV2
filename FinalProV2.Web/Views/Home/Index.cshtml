@@ -6,7 +6,7 @@
 <div id="wrapper" class="col-md-10">
 	@foreach (var category in Model)
 	{
-		<div class="row table-bordered" onclick="location.href='/Home/CategoryDetail/@category.Id'">
+		<div class="row table-bordered table-striped table-hover" onclick="location.href='/Home/CategoryDetail/@category.Id'">
 			<h2>@category.Title</h2>
 		</div>
 	}
