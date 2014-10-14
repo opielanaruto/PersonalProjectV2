@@ -6,6 +6,8 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using FinalProV2.Web.Models;
+using FinalProV2.DataModels;
+using FinalProV2.Db;
 
 namespace FinalProV2.Web
 {

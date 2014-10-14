@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using FinalProV2.Web.Models;
+using FinalProV2.DataModels;
 
 namespace FinalProV2.Web.Controllers
 {

@@ -11,6 +11,8 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using FinalProV2.Web.Models;
+using FinalProV2.DataModels;
+using FinalProV2.Db;
 
 namespace FinalProV2.Web
 {
