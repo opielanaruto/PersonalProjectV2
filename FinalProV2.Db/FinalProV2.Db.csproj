@@ -59,6 +59,11 @@
     <Compile Include="Content.cs" />
     <Compile Include="Friends.cs" />
     <Compile Include="Messages.cs" />
+    <Compile Include="Migrations\201410141931071_Initial.cs" />
+    <Compile Include="Migrations\201410141931071_Initial.Designer.cs">
+      <DependentUpon>201410141931071_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
@@ -71,6 +76,11 @@
       <Project>{6cbc1322-c33a-4979-9c53-82d47ea9084e}</Project>
       <Name>FinalProV2.DataModels</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201410141931071_Initial.resx">
+      <DependentUpon>201410141931071_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
