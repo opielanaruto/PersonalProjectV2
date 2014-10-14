@@ -11,8 +11,8 @@ using System.Web.Mvc;
 
 namespace FinalProV2.Web.Controllers
 {
-    public class CategoryController : Controller
-    {
+	public class CategoryController : Controller
+	{
 		IFinalProV2Adapter _adapter;
 		public CategoryController()
 		{
@@ -40,13 +40,13 @@ namespace FinalProV2.Web.Controllers
 		public ActionResult Edit(Category category)
 		{
 			category = _adapter.UpdateCategory(category);
-			return RedirectToAction("Index");
+			return RedirectToAction("CategoryDetail/" + category.Id);
 		}
-		//[HttpPost]
-		//public ActionResult Delete(int id)
-		//{
-		//	Category category = _adapter.DeleteCategory(id);
-		//	return Redirect("Index");
-		//}
-    }
+		[HttpPost]
+		public ActionResult Delete(int id)
+		{
+			_adapter.DeleteCategory(id);
+			return Redirect("/Home/Index");
+		}
+	}
 }

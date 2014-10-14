@@ -13,8 +13,8 @@ using FinalProV2.Db.Adapters.Data;
 
 namespace FinalProV2.Web.Controllers
 {
-    public class ContentController : Controller
-    {
+	public class ContentController : Controller
+	{
 		/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 		IFinalProV2Adapter _adapter;
 		public ContentController()
@@ -38,21 +38,21 @@ namespace FinalProV2.Web.Controllers
 			c.Title = title;
 			c.CategoryId = categoryId;
 			c = _adapter.AddContent(c);
-			return RedirectToAction("Index");
+			return RedirectToAction("Home/Index");
 		}
 		/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 		[HttpPost]
 		public ActionResult Edit(Content content)
 		{
 			content = _adapter.UpdateContent(content);
-			return RedirectToAction("Index");
+			return RedirectToAction("Home/Index");
 		}
-		//[HttpPost]
-		//public ActionResult Delete(int id)
-		//{
-		//	Content content = _adapter.DeleteContent(id);
-		//	return RedirectToAction("Index");
-		//}
+		[HttpPost]
+		public ActionResult Delete(int id)
+		{
+			_adapter.DeleteContent(id);
+			return Redirect("/Home/Index");
+		}
 		/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-    }
+	}
 }

@@ -1,13 +1,14 @@
 ﻿@model List<FinalProV2.DataModels.Category>
-<div class="jumbotron">
-	<h1>XXL Jumbotron</h1>
+<div class="help-block">
+	<h1>Categories</h1>
 	<button class="btn btn-sm btn-primary pull-right" onclick="location.href='/Home/AddCategory/'">Add New Category</button><br /><br /><br />
+	<a href="/Home/AddCategory/"> Add New Category</a>
 </div>
 <div id="wrapper" class="col-md-10">
 	@foreach (var category in Model)
 	{
 		<div class="row table-bordered table-striped table-hover" onclick="location.href='/Home/CategoryDetail/@category.Id'">
-			<h2>@category.Title</h2>
+			<h2 class="text-center">@category.Title</h2>
 		</div>
 	}
 </div>

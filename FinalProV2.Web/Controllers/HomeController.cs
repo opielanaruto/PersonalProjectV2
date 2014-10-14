@@ -21,22 +21,22 @@ namespace FinalProV2.Web.Controllers
 		}
 		public ActionResult Index()
 		{
-			List<Category> categorys = _adapter.GetAllCategory();
-			return View(categorys);
+			List<Category> category = _adapter.GetAllCategory();
+			return View(category);
 		}
 
-		public ActionResult About()
-		{
-			ViewBag.Message = "Your application description page.";
+		//public ActionResult About()
+		//{
+		//	ViewBag.Message = "Your application description page.";
 
-			return View();
-		}
+		//	return View();
+		//}
 
-		public ActionResult Contact()
-		{
-			ViewBag.Message = "Your contact page.";
+		//public ActionResult Contact()
+		//{
+		//	ViewBag.Message = "Your contact page.";
 
-			return View();
-		}
+		//	return View();
+		//}
 	}
 }

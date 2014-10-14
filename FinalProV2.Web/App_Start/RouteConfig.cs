@@ -12,7 +12,11 @@ namespace FinalProV2.Web
 		public static void RegisterRoutes(RouteCollection routes)
 		{
 			routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+			routes.MapRoute(
+				name: "testRoute",
+				url: "test/{action}/{newId}",
+				defaults: new { controller = "New", action = "Wombat", newId = UrlParameter.Optional }
+				);
 			routes.MapRoute(
 				name: "Default",
 				url: "{controller}/{action}/{id}",

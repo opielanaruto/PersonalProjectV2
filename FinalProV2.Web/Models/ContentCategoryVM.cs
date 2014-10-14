@@ -6,9 +6,9 @@ using System.Web;
 
 namespace FinalProV2.Web.Models
 {
-	public class ContentVM
+	public class ContentCategoryVM
 	{
-		public Category Category { get; set; }
 		public Content Content { get; set; }
+		public List<Category> Category { get; set; }
 	}
 }
