@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FinalProV2.Db;
+using FinalProV2.Db.Adapters.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +10,14 @@ namespace FinalProV2.Web.Controllers
 {
 	public class HomeController : Controller
 	{
+		IFinalProV2Adapter _adapter;
+		public HomeController(IFinalProV2Adapter adapter) {
+			_adapter = adapter;
+		}
 		public ActionResult Index()
 		{
-			return View();
+			List<Category> categorys = _adapter.GetAllCategory();
+			return View(categorys);
 		}
 
 		public ActionResult About()
