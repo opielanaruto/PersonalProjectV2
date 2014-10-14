@@ -1,0 +1,25 @@
+﻿@model FinalProV2.Models.ContentVM
+
+<h2>@Model.Category.Title</h2>
+
+<div class="row table-bordered">
+	<button class="btn btn-sm btn-warning pull-right" onclick="location.href='/Home/EditCategory/@Model.Category.Id'">Edit Category</button>
+	<button class="btn btn-sm btn-danger pull-right" onclick="location.href='/Home/DeleteCategory/@Model.Category.Id'">Delete Category</button>
+	<table class="table table-hover">
+		<tr>
+			<th>
+				<button class="btn btn-sm btn-success pull-right" onclick="location.href='/Home/AddContent/@Model.Category.Id'"><i class="fa fa-2x fa-plus"></i> Content</button><br />
+				<button class="btn btn-sm btn-warning pull-right" onclick="location.href='/Home/EditContent/@Model.Content.Id'">Edit Content</button><br />
+				<button class="btn btn-sm btn-danger pull-right" onclick="location.href='/Home/DeleteContent/@Model.Content.Id'">Delete Content</button><br />
+			</th>
+		</tr>
+		@foreach (var c in @Model.Category.contents)
+		{
+			<tr>
+				<td class="text-center"><img src="@c.Image" style="width:80px;height:80px" /></td>
+				<td class="text-center">@c.Title</td>
+				<td class="text-center">@c.Link</td>
+			</tr>
+		}
+	</table>
+</div>

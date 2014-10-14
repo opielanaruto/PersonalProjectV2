@@ -1,0 +1,15 @@
+﻿@model int
+@{
+    ViewBag.Title = "AddContent";
+}
+
+<h2>AddContent</h2>
+<div class="col-md-10">
+	<form method="post">
+		Image: <input type="text" name="title" placeholder="Enter Image Url" style="width:100%" /><br />
+		Title: <input type="text" name="title" placeholder="Enter Title" style="width:100%" /><br />
+		Link:  <input type="text" name="title" placeholder="Enter Url" style="width:100%" /><br />
+		<input type="hidden" name="categoryId" value="@Model" />
+		<input type="submit" class="btn btn-sm btn-success" value="Add New Content" />
+	</form>
+</div>
